@@ -21,3 +21,19 @@ export default function MarkdownEditor() {
         </div>
     );
 }
+
+const sentence = "Hello, world!";
+function reverseSentence(sentence) {
+    const reversed = sentence.split(' ').reverse().join(' ');
+    return reversed.charAt(0).toUpperCase() + reversed.slice(1);
+}
+console.log(reverseSentence(sentence)); // "World! hello,"
+
+const data = [
+    [{ name: 'John' }, { name: 'Doe' }],
+    [{ name: 'Jane' }, { name: 'Smith' }],
+    [{ name: 'Bob' }, { name: 'Brown' }]
+];
+
+const names = data.flatMap(innerArray => innerArray.map(obj => obj.name));
+console.log(names); // ['John', 'Doe', 'Jane', 'Smith', 'Bob', 'Brown']
